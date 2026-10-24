@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rigline – PC Gaming</title>
+<meta name="description" content="Find your next PC game and the rig to run it.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎮</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <a class="logo" href="#top">Rigline</a>
+  <nav aria-label="Main">
+    <a href="#games">Games</a>
+    <a href="#rigs">Build a rig</a>
+    <a href="#news">News</a>
+    <a href="#join">Newsletter</a>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <h1>Frames per second<br>is a love language.</h1>
+    <p>Browse PC games by genre, then see what hardware it takes to run them well.</p>
+    <a class="btn" href="#games">Browse games</a>
+    <div class="fps" aria-hidden="true">
+      <span>FPS</span><b id="fps">144</b>
+    </div>
+  </section>
+
+  <section id="games" class="block">
+    <h2>PC game library</h2>
+    <div class="tools">
+      <label class="sr" for="q">Search games</label>
+      <input id="q" type="search" placeholder="Search games">
+      <div class="chips" id="chips" role="group" aria-label="Filter by genre"></div>
+    </div>
+    <div class="grid" id="grid"></div>
+    <p class="empty" id="empty" hidden>No games match. Clear the search or pick another genre.</p>
+  </section>
+
+  <section id="rigs" class="block">
+    <h2>Pick a rig by how you play</h2>
+    <div class="tiers" id="tiers"></div>
+  </section>
+
+  <section id="news" class="block">
+    <h2>News</h2>
+    <ul class="news">
+      <li><time datetime="2026-10-20">Oct 20</time><div><h3>Upscaling is now standard in new releases</h3><p>Most big PC launches ship with several upscaling options, so older graphics cards stay useful for longer.</p></div></li>
+      <li><time datetime="2026-10-14">Oct 14</time><div><h3>Handheld PCs keep getting better</h3><p>Portable gaming PCs now run many current titles at playable settings, which makes them a real second machine.</p></div></li>
+      <li><time datetime="2026-10-06">Oct 6</time><div><h3>Fast storage matters for big open worlds</h3><p>An NVMe drive cuts load times and texture pop-in in large games.</p></div></li>
+    </ul>
+  </section>
+
+  <section id="join" class="block join">
+    <h2>Get the weekly PC games list</h2>
+    <p>Five games worth installing, once a week.</p>
+    <form id="form">
+      <label class="sr" for="email">Email address</label>
+      <input id="email" type="email" required placeholder="you@example.com">
+      <button class="btn" type="submit">Subscribe</button>
+    </form>
+    <p id="msg" role="status"></p>
+  </section>
+</main>
+
+<footer><p>Rigline is a fan project. Game names belong to their owners.</p></footer>
+<script src="script.js"></script>
+</body>
+</html>
